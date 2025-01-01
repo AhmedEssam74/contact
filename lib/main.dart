@@ -1,4 +1,5 @@
 import 'package:contact/home_screen.dart';
+import 'package:contact/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeScreen.routName,
+      initialRoute: SplashScreen.routName,
       themeMode: ThemeMode.system,
       theme: ThemeData(),
       routes: {
+        SplashScreen.routName: (context) => const SplashScreen(),
         HomeScreen.routName: (context) => const HomeScreen(),
       },
     );
