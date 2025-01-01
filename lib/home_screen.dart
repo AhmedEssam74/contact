@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     return const Scaffold(
       body: Center(
         child: Text(
-          "Hallo",
+          "Hallo World",
           style: TextStyle(fontSize: 50),
         ),
       ),
