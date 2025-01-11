@@ -4,6 +4,7 @@ import 'package:contact/screens/widgets/add_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lottie/lottie.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routName = "HomeScreen";
@@ -36,32 +37,32 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body:
-          // contacts.isEmpty
-          //     ? SizedBox(
-          //         width: double.infinity,
-          //         child: Column(
-          //           crossAxisAlignment: CrossAxisAlignment.center,
-          //           children: [
-          //             SizedBox(
-          //               height: 100.w,
-          //             ),
-          //             Lottie.asset(
-          //               "assets/animation/empty_list.json",
-          //               width: 368.w,
-          //               height: 368.h,
-          //             ),
-          //             const Text(
-          //               "There is No Contacts Added Here",
-          //               style: TextStyle(
-          //                 color: Colors.white,
-          //                 fontSize: 18,
-          //                 fontWeight: FontWeight.w500,
-          //               ),
-          //             )
-          //           ],
-          //         ),
-          //       )
-          //     :
+          contacts.isEmpty
+              ? SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 100.w,
+                      ),
+                      Lottie.asset(
+                        "assets/animation/empty_list.json",
+                        width: 368.w,
+                        height: 368.h,
+                      ),
+                      const Text(
+                        "There is No Contacts Added Here",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              :
           Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -237,6 +238,6 @@ class _HomeScreenState extends State<HomeScreen> {
       },
     );
     Navigator.pop(context);
-    // print(contacts[0]);
+    // print(contacts[1]);
   }
 }
