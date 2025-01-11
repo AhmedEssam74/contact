@@ -1,7 +1,5 @@
 import 'dart:async';
-
-import 'package:contact/home_screen.dart';
-import 'package:contact/my_theme.dart';
+import 'package:contact/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.primaryColor,
+      backgroundColor: Theme.of(context).primaryColor,
       body: Center(
         child: Image.asset("assets/images/logo.png"),
       ),
