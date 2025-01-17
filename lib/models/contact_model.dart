@@ -2,7 +2,7 @@ class ContactModel {
   String name;
   String email;
   String? photo;
-  String? phoneNumber;
+  String phoneNumber;
 
   ContactModel({
     required this.name,

@@ -13,7 +13,7 @@ class LightTheme extends BaseTheme {
   @override
   ThemeData get themeData => ThemeData(
         primaryColor: primaryColor,
-        cardColor:const  Color(0xffF93E3E),
+        cardColor: const Color(0xffF93E3E),
         scaffoldBackgroundColor: primaryColor,
         appBarTheme: AppBarTheme(
           backgroundColor: primaryColor,
@@ -43,12 +43,17 @@ class LightTheme extends BaseTheme {
             fontSize: 20.0.sp,
             fontWeight: FontWeight.w500,
             color: primaryColor,
-          ),bodySmall: GoogleFonts.aclonica(
+          ),
+          bodySmall: GoogleFonts.aclonica(
             fontSize: 14.sp,
             fontWeight: FontWeight.w500,
             color: primaryColor,
           ),
-
+          bodyMedium: GoogleFonts.aclonica(
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w500,
+            color: primaryColor,
+          ),
         ),
       );
 }

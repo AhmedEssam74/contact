@@ -2,6 +2,7 @@ import 'package:contact/Themes/light_theme.dart';
 import 'package:contact/screens/home_screen.dart';
 import 'package:contact/Themes/my_theme.dart';
 import 'package:contact/screens/splash_screen.dart';
+import 'package:contact/screens/widgets/contact_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         theme: lightTheme.themeData,
         routes: {
           SplashScreen.routName: (context) => const SplashScreen(),
-          HomeScreen.routName: (context) => HomeScreen(),
+          HomeScreen.routName: (context) => const HomeScreen(),
         },
       ),
     );

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:contact/Themes/light_theme.dart';
 import 'package:contact/screens/widgets/text_field_btn.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +65,7 @@ class _AddBottomSheetState extends State<AddBottomSheet> {
                       ),
                       image: file != null
                           ? DecorationImage(
-                              image: AssetImage(file!.path),
+                              image: FileImage(File(file!.path)),
                               fit: BoxFit.fill,
                             )
                           : null,
@@ -79,27 +81,33 @@ class _AddBottomSheetState extends State<AddBottomSheet> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(
-                        name,
-                        style: Theme.of(context).textTheme.titleSmall,
+                      Flexible(
+                        child: Text(
+                          name,
+                          style: Theme.of(context).textTheme.titleSmall,
+                        ),
                       ),
                       Container(
                         height: 2.h,
                         width: 192.w,
                         color: LightTheme.secondaryColor,
                       ),
-                      Text(
-                        email,
-                        style: Theme.of(context).textTheme.titleSmall,
+                      Flexible(
+                        child: Text(
+                          email,
+                          style: Theme.of(context).textTheme.titleSmall,
+                        ),
                       ),
                       Container(
                         height: 2.h,
                         width: 192.w,
                         color: LightTheme.secondaryColor,
                       ),
-                      Text(
-                        phone,
-                        style: Theme.of(context).textTheme.titleSmall,
+                      Flexible(
+                        child: Text(
+                          phone,
+                          style: Theme.of(context).textTheme.titleSmall,
+                        ),
                       ),
                     ],
                   ),
@@ -107,7 +115,7 @@ class _AddBottomSheetState extends State<AddBottomSheet> {
               ],
             ),
             SizedBox(
-              height:32.h,
+              height: 32.h,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
